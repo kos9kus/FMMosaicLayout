@@ -30,7 +30,7 @@
 #import "FMFooterView.h"
 
 static const CGFloat kFMHeaderFooterHeight  = 44.0;
-static const NSInteger kFMMosaicColumnCount = 2;
+static const NSInteger kFMMosaicColumnCount = 1;
 
 @interface FMMosaicCollectionViewController () <FMMosaicLayoutDelegate>
 
@@ -117,7 +117,7 @@ static const NSInteger kFMMosaicColumnCount = 2;
 
 - (FMMosaicCellSize)collectionView:(UICollectionView *)collectionView layout:(FMMosaicLayout *)collectionViewLayout
         mosaicCellSizeForItemAtIndexPath:(NSIndexPath *)indexPath {
-    return (indexPath.item % 12 == 0) ? FMMosaicCellSizeBig : FMMosaicCellSizeSmall;
+    return (indexPath.item % 4 == 0) ? FMMosaicCellSizeBig : FMMosaicCellSizeSmall;
 }
 
 - (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(FMMosaicLayout *)collectionViewLayout

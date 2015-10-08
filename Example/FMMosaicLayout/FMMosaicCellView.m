@@ -50,7 +50,7 @@ static NSString* const kFMMosaicCellViewReuseIdentifier = @"FMMosaicCellViewReus
 - (void)onLongPress:(UILongPressGestureRecognizer *)longPressGestureRecognizer {
     if (longPressGestureRecognizer.state == UIGestureRecognizerStateBegan) {
         [UIView animateWithDuration:0.2 delay:0.0 usingSpringWithDamping:0.6 initialSpringVelocity:0.8 options:UIViewAnimationOptionCurveEaseOut animations:^{
-            self.transform = CGAffineTransformMakeScale(0.9, 0.9);
+            self.transform = CGAffineTransformMakeScale(0.95, 0.95);
             self.overlayView.alpha = 0.35;
         } completion:nil];
         
