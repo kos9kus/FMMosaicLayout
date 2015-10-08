@@ -31,6 +31,7 @@
 
 static const CGFloat kFMHeaderFooterHeight  = 44.0;
 static const NSInteger kFMMosaicColumnCount = 1;
+static const CGFloat kFMMosaicScaleHeightToWidth = 1.5;
 
 @interface FMMosaicCollectionViewController () <FMMosaicLayoutDelegate>
 
