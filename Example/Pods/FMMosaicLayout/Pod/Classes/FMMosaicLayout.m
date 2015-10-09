@@ -278,7 +278,7 @@ static const BOOL kFMDefaultFooterShouldOverlayContent = NO;
     //
     switch (mosaicCellSize) {
         case FMMosaicCellSizeSmall:
-            cellHeight = cellHeight * 1.5;
+            cellHeight = cellHeight * [self.delegate FMMosaicScaledValueHeightToWidth];
             break;
         default:
             break;

@@ -31,7 +31,7 @@
 
 static const CGFloat kFMHeaderFooterHeight  = 44.0;
 static const NSInteger kFMMosaicColumnCount = 1;
-static const CGFloat kFMMosaicScaleHeightToWidth = 1.5;
+static const CGFloat kFMMosaicScaledHeightToWidth = 1.5;
 
 @interface FMMosaicCollectionViewController () <FMMosaicLayoutDelegate>
 
@@ -40,6 +40,8 @@ static const CGFloat kFMMosaicScaleHeightToWidth = 1.5;
 @end
 
 @implementation FMMosaicCollectionViewController
+
+@synthesize FMMosaicScaledValueHeightToWidth;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -54,12 +56,14 @@ static const CGFloat kFMMosaicScaleHeightToWidth = 1.5;
                  withReuseIdentifier:[FMFooterView reuseIdentifier]];
     
     [self adjustContentInsets];
+    self.FMMosaicScaledValueHeightToWidth = kFMMosaicScaledHeightToWidth;
 }
 
 - (void)adjustContentInsets {
     UIEdgeInsets insets = UIEdgeInsetsMake([UIApplication sharedApplication].statusBarFrame.size.height, 0, 0, 0);
     self.collectionView.contentInset = insets;
     self.collectionView.scrollIndicatorInsets = insets;
+    self.collectionView.bounces = YES;
 }
 
 #pragma mark <UICollectionViewDataSource>
@@ -123,7 +127,7 @@ static const CGFloat kFMMosaicScaleHeightToWidth = 1.5;
 
 - (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(FMMosaicLayout *)collectionViewLayout
         insetForSectionAtIndex:(NSInteger)section {
-    return UIEdgeInsetsMake(5.0, 5.0, 5.0, 5.0);
+    return UIEdgeInsetsMake(5.0, 3.0, 5.0, 3.0);
 }
 
 - (CGFloat)collectionView:(UICollectionView *)collectionView layout:(FMMosaicLayout *)collectionViewLayout
@@ -142,7 +146,7 @@ static const CGFloat kFMMosaicScaleHeightToWidth = 1.5;
 }
 
 - (BOOL)headerShouldOverlayContentInCollectionView:(UICollectionView *)collectionView layout:(FMMosaicLayout *)collectionViewLayout {
-    return YES;
+    return NO;
 }
 
 - (BOOL)footerShouldOverlayContentInCollectionView:(UICollectionView *)collectionView layout:(FMMosaicLayout *)collectionViewLayout {

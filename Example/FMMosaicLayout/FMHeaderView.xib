@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -25,6 +25,7 @@
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SECTION 0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NO8-Pf-ujc">
                                             <rect key="frame" x="8" y="14" width="304" height="21"/>
+                                            <animations/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="21" id="jLh-bo-uKn"/>
                                             </constraints>
@@ -33,17 +34,20 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
+                                    <animations/>
                                     <constraints>
                                         <constraint firstItem="NO8-Pf-ujc" firstAttribute="leading" secondItem="BBS-h9-7UV" secondAttribute="leading" constant="8" id="6xv-ok-48b"/>
                                         <constraint firstAttribute="trailing" secondItem="NO8-Pf-ujc" secondAttribute="trailing" constant="8" id="eoy-Gb-VHc"/>
                                         <constraint firstAttribute="centerY" secondItem="NO8-Pf-ujc" secondAttribute="centerY" constant="0.5" id="vV3-oZ-DFS"/>
                                     </constraints>
                                 </view>
+                                <animations/>
                                 <vibrancyEffect>
                                     <blurEffect style="light"/>
                                 </vibrancyEffect>
                             </visualEffectView>
                         </subviews>
+                        <animations/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="hec-i8-vpN" secondAttribute="trailing" id="6sf-uS-WIk"/>
                             <constraint firstAttribute="bottom" secondItem="hec-i8-vpN" secondAttribute="bottom" id="932-iA-S7g"/>
@@ -51,9 +55,11 @@
                             <constraint firstItem="hec-i8-vpN" firstAttribute="top" secondItem="ozO-5V-rZx" secondAttribute="top" id="bSB-58-v3g"/>
                         </constraints>
                     </view>
+                    <animations/>
                     <blurEffect style="light"/>
                 </visualEffectView>
             </subviews>
+            <animations/>
             <constraints>
                 <constraint firstItem="Bx2-Hc-INr" firstAttribute="leading" secondItem="U6b-Vx-4bR" secondAttribute="leading" id="3EM-24-F0y"/>
                 <constraint firstAttribute="trailing" secondItem="Bx2-Hc-INr" secondAttribute="trailing" id="Kle-Wd-CKZ"/>
@@ -63,6 +69,7 @@
             <connections>
                 <outlet property="titleLabel" destination="NO8-Pf-ujc" id="ZTv-a6-XRL"/>
             </connections>
+            <point key="canvasLocation" x="-89" y="116"/>
         </collectionReusableView>
     </objects>
 </document>

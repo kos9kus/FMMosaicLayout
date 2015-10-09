@@ -32,7 +32,7 @@ typedef NS_ENUM(NSUInteger, FMMosaicCellSize) {
 
 @protocol FMMosaicLayoutDelegate <UICollectionViewDelegate>
 
-@property (nonatomic, assign) CGFloat kFMMosaicScaleHeightToWidth;
+@property (nonatomic, assign) CGFloat FMMosaicScaledValueHeightToWidth;
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView layout:(FMMosaicLayout *)collectionViewLayout numberOfColumnsInSection:(NSInteger)section;
 
